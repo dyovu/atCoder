@@ -1,0 +1,1 @@
+print(func_2)

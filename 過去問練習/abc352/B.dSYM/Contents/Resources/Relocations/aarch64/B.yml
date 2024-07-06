@@ -1,0 +1,9 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/andy/Documents/atCoder/過去問練習/ABC352/B"
+relocations:
+  - { offsetInCU: 0x16CC4, offset: 0x16CC4, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0x64238, symBinAddr: 0x10000C028, symSize: 0x0 }
+  - { offsetInCU: 0x16F72, offset: 0x16F72, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_B.cpp, symObjAddr: 0x70, symBinAddr: 0x100007EC4, symSize: 0x14 }
+  - { offsetInCU: 0x16F9E, offset: 0x16F9E, size: 0x8, addend: 0x0, symName: __Z41__static_initialization_and_destruction_0v, symObjAddr: 0x34, symBinAddr: 0x100007E88, symSize: 0x3C }
+  - { offsetInCU: 0x16F97, offset: 0x16F97, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100007E54, symSize: 0x34 }
+...

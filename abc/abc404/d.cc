@@ -15,6 +15,7 @@ int main(){
         chars.insert(i);
     }
 
+    
 
     for (auto c : n){
         int k = int(c);

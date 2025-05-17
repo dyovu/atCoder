@@ -6,22 +6,8 @@ using namespace std;
 using ll = long long;
 
 int main(){
-    string n;
+    int n;
     cin >> n;
 
-    set<int> chars;
-
-    rep(i, 26){
-        chars.insert(i);
-    }
-
-    
-
-    for (auto c : n){
-        int k = int(c);
-        chars.erase(k-97);
-        // cout << c << " " << k << endl;
-    }
-
-    cout << char(*begin(chars)+97) << endl;  
+     
 }

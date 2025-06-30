@@ -111,14 +111,14 @@ int main(){
     }
     
 
-    // // ans_vecの中身を表示
-    // for (int i = 0; i < n; i++) {
-    //     cout << "ans_vec[" << i << "]: ";
-    //     for (int j = 0; j < 2; j++) {
-    //         cout << ans_vec[i][j] << " ";
-    //     }
-    //     cout << endl;
-    // }
+    // ans_vecの中身を表示
+    for (int i = 0; i < n; i++) {
+        cout << "ans_vec[" << i << "]: ";
+        for (int j = 0; j < 2; j++) {
+            cout << ans_vec[i][j] << " ";
+        }
+        cout << endl;
+    }
 
 
     // ans_vecの中身を計算

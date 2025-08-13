@@ -1,0 +1,14 @@
+
+.DS_Store
+
+.Techプレゼン問題/
+
+.vscode
+
+# dump_practice、dp_practiceは要らない
+dump_practice/
+
+dp_practice/
+
+
+

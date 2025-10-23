@@ -1,4 +1,5 @@
 use proconio::input;
+use std::process::*;
 use std::collections::*;
 
 fn main(){
@@ -7,9 +8,10 @@ fn main(){
         a : [i32; n],
     }
 
-    let num_set:HashSet<i32>  = a.into_iter().collect();
-    let result_vec = num_set.into_iter().collect();
-
-    result_vec.sort();
-    println!("{:?}", result_vec);
+    let num_set:BTreeSet<i32>  = a.into_iter().collect();
+    
+    println!("{}", num_set.len());
+    for i in num_set{
+      print!("{} ",i);
+    }
 }

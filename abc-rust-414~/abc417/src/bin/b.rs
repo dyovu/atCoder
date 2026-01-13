@@ -9,7 +9,21 @@ fn print_type<T>(_: T) {
 fn main(){
     input!{
         n: usize,
-        a: [[usize; 2]; n],
+        m: usize,
+        a: [usize; n],
+        b: [usize; m],
+    }
+
+    let mut sub_vec  = a;
+    for i in b{
+        if let Ok(index) = sub_vec.binary_search(&i){
+            sub_vec.remove(index);
+        }
+    }
+
+    
+    for i in sub_vec{
+        print!("{} ", i);
     }
 
 }

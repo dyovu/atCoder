@@ -9,7 +9,12 @@ fn print_type<T>(_: T) {
 fn main(){
     input!{
         n: usize,
-        a: [[usize; 2]; n],
+        a: usize,
+        b: usize,
+        s: String,
     }
+
+
+    println!("{}", s.get(a..n-b).unwrap())
 
 }

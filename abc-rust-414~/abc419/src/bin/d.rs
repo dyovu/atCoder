@@ -21,17 +21,34 @@ fn main(){
         a: [[usize; 2]; m],
     }
 
-    let mut s_vec: Vec<char> = s.chars().collect();
-    let mut t_vec: Vec<char> = t.chars().collect();
+    let s_vec: Vec<char> = s.chars().collect();
+    let t_vec: Vec<char> = t.chars().collect();
+
+    let mut switch_point:Vec<usize> = vec![0; n+1];
+
+    // println!("{:?}", switch_point);
 
     for i in a.iter(){
-        let l = i[0] - 1;
-        let r = i[1] - 1;
-        for j in l..=r {
-            (s_vec[j], t_vec[j]) = (t_vec[j], s_vec[j]);
-        }
+        let l = i[0];
+        let r = i[1];
+        
+        switch_point[l-1] = (switch_point[l-1]+1)%2;
+        switch_point[r] = (switch_point[r]+1)%2;
+        // println!("{:?}, l: {}, r: {}", switch_point, l, r);
+        
     }
 
-    let ans: String = s_vec.iter().collect();
-    println!("{}", ans);
+    // println!("{:?}", switch_point);
+
+    let mut is_s = true;
+    for (index, value) in switch_point[..n].iter().enumerate(){
+        if value == &1{
+            is_s = !is_s;   
+        }
+        match is_s{
+            true => {print!("{}", s_vec[index])}
+            false => {print!("{}", t_vec[index])}
+        }
+    }   
+
 }

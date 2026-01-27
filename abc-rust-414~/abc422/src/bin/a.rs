@@ -8,8 +8,17 @@ fn print_type<T>(_: T) {
 
 fn main(){
     input!{
-        n: usize,
-        a: [[usize; 2]; n],
+        s: String,   
     }
+
+    let i = s.chars().nth(0).unwrap().to_digit(10).unwrap();
+    let j = s.chars().nth(2).unwrap().to_digit(10).unwrap();
+
+    if j == 8{
+        println!("{}-{}", i+1, 1);
+    }else{
+        println!("{}-{}", i, j+1);
+    }
+
 
 }

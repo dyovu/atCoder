@@ -8,12 +8,8 @@ fn print_type<T>(_: T) {
 
 fn main(){
     input!{
-        x: usize,
-        c: usize,
+        n: usize,
+        a: [[usize; 2]; n],
     }
-
-    let k = x/(1000+c);
-
-    println!("{}", 1000*k);
 
 }

@@ -9,7 +9,20 @@ fn print_type<T>(_: T) {
 fn main(){
     input!{
         n: usize,
-        a: [[usize; 2]; n],
+        m: usize,
+        k: usize,
+        a: [[usize; 2]; k],
+    }
+
+    let mut ans_count:Vec<usize> = vec![0; n+1];
+
+    for i in a.iter(){
+        let k = i[0];
+        ans_count[k] += 1;
+        if ans_count[k] == m{
+
+            print!("{} ", k)
+        }
     }
 
 }

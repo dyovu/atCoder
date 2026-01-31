@@ -8,8 +8,15 @@ fn print_type<T>(_: T) {
 
 fn main(){
     input!{
-        n: usize,
-        a: [[usize; 2]; n],
+        a: usize,
+        b: usize,
+        c: usize,
+    }
+
+    if a==b || b == c || c == a{
+        println!("Yes");
+    }else{
+        println!("No");
     }
 
 }

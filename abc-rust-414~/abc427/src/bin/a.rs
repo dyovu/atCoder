@@ -8,8 +8,11 @@ fn print_type<T>(_: T) {
 
 fn main(){
     input!{
-        n: usize,
-        a: [[usize; 2]; n],
+        n: String,
     }
+
+    let len = n.len();
+
+    println!("{}{}", &n[0..(len+1)/2-1], &n[(len+1)/2..])
 
 }

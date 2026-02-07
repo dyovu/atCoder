@@ -1,0 +1,23 @@
+[package]
+name = "abc429"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+proconio = "0.5.0"
+
+[[bin]]
+name = "a"
+path = "src/bin/a.rs"
+
+[[bin]]
+name = "b"
+path = "src/bin/b.rs"
+
+[[bin]]
+name = "c"
+path = "src/bin/c.rs"
+
+[[bin]]
+name = "d"
+path = "src/bin/d.rs"

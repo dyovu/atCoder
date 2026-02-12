@@ -9,7 +9,9 @@ fn print_type<T>(_: T) {
 fn main(){
     input!{
         n: usize,
-        a: [[usize; 2]; n],
+        b: usize,
     }
+
+    println!("{}", (n*1000)/b + 1);
 
 }

@@ -19,10 +19,10 @@ fn main() {
     let mut dp: Vec<i64> = vec![-1];
     dp[0] = 0; // 重さ0, 幸福度0 からスタート
 
-    for i in 0..n {
-        let w: usize = a[i][0];
-        let h: i64 = a[i][1] as i64;
-        let b: i64 = a[i][2] as i64;
+    for k in 0..n {
+        let w: usize = a[k][0];
+        let h: i64 = a[k][1] as i64;
+        let b: i64 = a[k][2] as i64;
 
         // 前の状態を保持 (cloneして使う)
         let prev = dp.clone();

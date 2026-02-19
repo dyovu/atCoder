@@ -9,7 +9,9 @@ fn print_type<T>(_: T) {
 fn main(){
     input!{
         n: usize,
-        a: [[usize; 2]; n],
+        m: usize,
     }
+
+    println!("{}", n*12+m);
 
 }

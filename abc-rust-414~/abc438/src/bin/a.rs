@@ -8,8 +8,11 @@ fn print_type<T>(_: T) {
 
 fn main(){
     input!{
-        n: usize,
-        a: [[usize; 2]; n],
+        d: isize,
+        f: isize,
     }
+    // println!("{}", (d-f)/7);
+    
+    println!("{}", f+ 7*((d-f)/7 +1) - d);
 
 }

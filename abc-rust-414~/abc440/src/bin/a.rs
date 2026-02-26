@@ -8,9 +8,11 @@ fn print_type<T>(_: T) {
 
 fn main(){
     input!{
-        n: u32,
+        x: usize,
+        y: usize,
     }
+    println!("{}",x*2usize.pow(y as u32));
 
-    println!("{}", 2u32.pow(n) - 2*n);
+
 
 }

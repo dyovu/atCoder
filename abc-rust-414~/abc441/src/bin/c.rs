@@ -17,26 +17,21 @@ fn main(){
     a.sort();
     // println!("{:?}", a);
 
-    let mx:usize = a[..k].iter().sum();
+    let mx_alc:usize = a[..k].iter().sum::<usize>();
 
     // println!("mx: {}", mx);
 
-    if mx < x {
+    if mx_alc < x {
         println!("{}", -1);
         return
     }
 
     let mut sum:usize = 0;
-    for (index, &value) in a.iter().enumerate(){
-        sum += value;
+    for i in 1..=k{
+        sum += a[k-i];
         if x <= sum {
-            println!("{}", index + 1 + n - k);
+            println!("{}", i + n - k);
             return
         }
     }
-
-
-
-
-
 }

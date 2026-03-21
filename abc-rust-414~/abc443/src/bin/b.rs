@@ -8,8 +8,18 @@ fn print_type<T>(_: T) {
 
 fn main(){
     input!{
-        n: usize,
-        a: [[usize; 2]; n],
+        mut n: usize,
+        k: usize,
     }
+
+    let mut age = n;
+    let mut cnt = n;
+
+    while cnt < k{
+        age += 1;
+        cnt += age;   
+    }
+
+    println!("{}", age-n);
 
 }

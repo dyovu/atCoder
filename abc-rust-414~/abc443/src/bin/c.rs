@@ -9,7 +9,24 @@ fn print_type<T>(_: T) {
 fn main(){
     input!{
         n: usize,
-        a: [[usize; 2]; n],
+        t: usize,
+        a: [usize; n],
     }
+
+    let mut start:usize = 0;
+    let mut cnt:usize = 0;
+
+    for i in a{
+        if start < i{
+            cnt += i-start;
+            start = i+100;
+        }
+    }
+
+    if start < t{
+        cnt += t-start;
+    }
+
+    println!("{}", cnt);
 
 }

@@ -9,7 +9,22 @@ fn print_type<T>(_: T) {
 fn main(){
     input!{
         n: usize,
-        a: [[usize; 2]; n],
+        k: usize,
     }
+
+    let mut cnt = 0;
+    for i in 0..=n{
+        let s = i.to_string();
+        let mut sum_digits: usize = 0;
+        for j in s.chars(){
+            sum_digits += j.to_digit(10).unwrap() as usize;
+            // println!("{}", j);
+        }
+        if sum_digits == k{
+            cnt += 1;
+        }
+    }
+
+    println!("{}", cnt);
 
 }

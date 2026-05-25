@@ -8,8 +8,17 @@ fn print_type<T>(_: T) {
 
 fn main(){
     input!{
-        n: usize,
-        a: [[usize; 2]; n],
+        n: String
     }
 
+    let mut pre = n.chars().nth(0).unwrap();
+    for i in n.chars(){
+        if pre != i{
+            print!("No");
+            return
+        }
+        pre = i
+    }
+
+    print!( "Yes")
 }

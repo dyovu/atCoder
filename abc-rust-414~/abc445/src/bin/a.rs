@@ -8,8 +8,13 @@ fn print_type<T>(_: T) {
 
 fn main(){
     input!{
-        n: usize,
-        a: [[usize; 2]; n],
+        n: String
+    }
+    
+    if n.chars().last().unwrap() == n.chars().next().unwrap() {
+        print!("Yes")
+    }else{
+        print!("No")
     }
 
 }

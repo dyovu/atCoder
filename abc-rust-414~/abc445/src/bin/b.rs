@@ -9,7 +9,19 @@ fn print_type<T>(_: T) {
 fn main(){
     input!{
         n: usize,
-        a: [[usize; 2]; n],
+        a: [String; n],
+    }
+
+    let m = a.iter().map(|s| s.len()).max().unwrap();
+
+    for i in a{
+        let diff = (m - i.len())/2;
+        // println!("{}", diff);
+
+        let fix = ".".repeat(diff);
+        print!("{}", fix);
+        print!("{}", i);
+        println!("{}", fix);
     }
 
 }

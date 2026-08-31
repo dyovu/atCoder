@@ -9,7 +9,20 @@ fn print_type<T>(_: T) {
 fn main(){
     input!{
         n: usize,
-        a: [[usize; 2]; n],
+        str: String,
+    }
+    
+    let mut iter = str.chars();
+
+    for i in iter.by_ref(){
+       if i != 'o'{
+            print!("{}", i);
+            break;
+        }
     }
 
+    for i in iter{
+        print!("{}", i);
+    }
+    println!();
 }

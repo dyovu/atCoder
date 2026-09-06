@@ -1,0 +1,18 @@
+use proconio::input;
+// use std::io::{self, BufRead};
+// use std::collections::*;
+
+fn print_type<T>(_: T) {
+    println!("{}", std::any::type_name::<T>());
+}
+
+fn main(){
+    input!{
+        n: usize,
+        a: [usize; n],
+        x: usize
+    }
+
+    println!("{}", a[x - 1]);
+
+}

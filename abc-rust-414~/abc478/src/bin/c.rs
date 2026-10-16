@@ -35,11 +35,11 @@ fn main(){
     // println!("{:?}", slice);
 
     let mut cnt = 0;
-    while prev_idx == 0 || a[prev_idx - 1] > slice[0]{
+    while prev_idx > 0 && a[prev_idx - 1] > slice[0]{
         prev_idx -= 1;
         cnt += 1;
     }
-    while back_idx == n - 1 || a[back_idx + 1] < slice[slice.len() - 1]{
+    while back_idx < n - 1 && a[back_idx + 1] < slice[slice.len() - 1]{
         back_idx += 1;
         cnt += 1;
     }
